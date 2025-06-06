@@ -363,6 +363,7 @@ footer {
 
     .gallery {
         grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 }
 
@@ -372,7 +373,8 @@ footer {
     }
 
     .gallery {
-        grid-template-columns: 1fr;
+        /* Keep the two-column layout on smaller tablets and large phones */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     header nav ul {
@@ -382,6 +384,7 @@ footer {
     header nav ul li {
         display: block;
         margin: 10px 0;
+        text-align: center;
     }
 
     .resume-sections {
@@ -419,6 +422,10 @@ footer {
 
     h2 {
         font-size: 1.5rem;
+    }
+
+    .gallery {
+        gap: 10px;
     }
 
     .contact-info p {
