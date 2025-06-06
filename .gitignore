@@ -1,2 +1,3 @@
-# Ignore the Extra_Stuff directory
+# Ignore these
 Extra_Stuff/ 
+node_modules/

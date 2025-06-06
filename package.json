@@ -1,0 +1,25 @@
+{
+  "name": "000portfolio-info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianWinsor/CWportfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ChristianWinsor/CWportfolio/issues"
+  },
+  "homepage": "https://github.com/ChristianWinsor/CWportfolio#readme",
+  "dependencies": {
+    "imagemin-cli": "^8.0.0",
+    "imagemin-webp": "^8.0.0"
+  }
+}

@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-image: url('images/camerapics/IMG_0103.jpg');
+    background-image: url('images/camerapics/IMG_0103.webp');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -11,10 +11,27 @@ body {
 }
 
 header {
-    background: #333;
+    background: rgba(51, 51, 51, 0.9);
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+}
+
+header.visible {
+    transform: translateY(0);
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 header nav ul {
@@ -32,9 +49,15 @@ header nav a {
     text-decoration: none;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
 main {
     width: 80%;
-    margin: 20px auto;
+    margin: 80px auto 20px;
     background: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -43,7 +66,7 @@ main {
 #hero {
     text-align: center;
     padding: 100px 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/camerapics/IMG_2006.JPG');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/camerapics/IMG_2006.webp');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -377,14 +400,37 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 20px;
+    }
+
     header nav ul {
-        padding: 0;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    header nav ul.active {
+        display: flex;
     }
 
     header nav ul li {
         display: block;
-        margin: 10px 0;
+        margin: 0;
+        width: 100%;
         text-align: center;
+    }
+
+    header nav ul li a {
+        padding: 15px;
+        display: block;
+        border-bottom: 1px solid #444;
     }
 
     .resume-sections {

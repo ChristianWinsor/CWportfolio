@@ -1,6 +1,70 @@
 // Modal functionality will be added here later. 
 
 document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('header');
+    const hamburger = document.querySelector('.hamburger');
+    const navUl = document.querySelector('nav ul');
+
+    // Show header on hover
+    document.addEventListener('mousemove', function(e) {
+        if (e.clientY < 60) {
+            header.classList.add('visible');
+        }
+    });
+
+    // Keep header visible if the nav is open
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            navUl.classList.toggle('active');
+            header.classList.add('visible');
+        });
+    }
+
+    // Hide header when scrolling down, show when scrolling up or at top
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop === 0) {
+            header.classList.add('visible');
+        } else if (scrollTop > lastScrollTop) {
+            if (!navUl.classList.contains('active')) {
+                header.classList.remove('visible');
+            }
+        } else {
+            header.classList.add('visible');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+
+    // Initially show header if at top of page
+    if (window.pageYOffset === 0) {
+        header.classList.add('visible');
+    }
+
+    // JS-based Lazy Loading
+    const lazyImages = document.querySelectorAll('.lazy');
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        lazyImages.forEach(img => {
+            observer.observe(img);
+        });
+    } else {
+        // Fallback for older browsers
+        lazyImages.forEach(img => {
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+        });
+    }
+
     const modal = document.getElementById("modal");
 
     // Only run modal logic if the modal element exists on the page

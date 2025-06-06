@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christian Winsor - Portfolio</title>
+    <link rel="icon" href="images/cblogo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#experience">Experience</a></li>
@@ -166,10 +170,10 @@
         <section id="portfolio-preview">
             <h2>Portfolio Preview</h2>
             <div class="gallery">
-                <div class="gallery-item"><img src="images/Figma0.png" alt="Accelera project prototype" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/accelera.png" alt="Accelera YouTube banner" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/carbuncle.png" alt="Trading card style ad" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/rustpainting.png" alt="Rust painting" loading="lazy"></div>
+                <div class="gallery-item"><img data-src="images/Figma0.webp" alt="Accelera project prototype" class="lazy"></div>
+                <div class="gallery-item"><img data-src="images/accelera.webp" alt="Accelera YouTube banner" class="lazy"></div>
+                <div class="gallery-item"><img data-src="images/carbuncle.webp" alt="Trading card style ad" class="lazy"></div>
+                <div class="gallery-item"><img data-src="images/rustpainting.webp" alt="Rust painting" class="lazy"></div>
             </div>
             <div style="text-align: center; margin-top: 20px;">
                 <a href="gallery.html" class="button">View Full Gallery</a>
