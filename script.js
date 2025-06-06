@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (scrollTopBtn) {
         window.onscroll = function() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            if (window.scrollY > 100) {
                 scrollTopBtn.style.display = "block";
             } else {
                 scrollTopBtn.style.display = "none";
