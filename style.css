@@ -322,4 +322,12 @@ footer {
 
 .project-links a:hover, .publication-links a:hover {
     text-decoration: underline;
+}
+
+#portfolio-preview {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
 } 
