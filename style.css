@@ -101,6 +101,10 @@ h3 {
     padding-bottom: 10px;
 }
 
+#portfolio h3 {
+    text-align: center;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
