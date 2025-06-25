@@ -254,11 +254,11 @@ footer {
     line-height: 1.5;
 }
 
-.experience-item, .publication-item, .project-item {
+.experience-item, .project-item {
     margin-bottom: 20px;
 }
 
-.experience-item h3, .publication-item h4, .project-item h4 {
+.experience-item h3, .project-item h4 {
     margin-bottom: 5px;
 }
 
@@ -334,22 +334,22 @@ footer {
     color: #007bff;
 }
 
-.project-links, .publication-links {
+.project-links {
     margin: 20px 0;
 }
 
-.project-links h4, .publication-links h4 {
+.project-links h4 {
     margin-bottom: 10px;
 }
 
-.project-links a, .publication-links a {
+.project-links a {
     display: block;
     margin: 5px 0;
     color: #333;
     text-decoration: none;
 }
 
-.project-links a:hover, .publication-links a:hover {
+.project-links a:hover {
     text-decoration: underline;
 }
 
@@ -450,7 +450,7 @@ footer {
         margin: 0 5px;
     }
 
-    .project-links a, .publication-links a {
+    .project-links a {
         display: block;
         margin-bottom: 10px;
     }
